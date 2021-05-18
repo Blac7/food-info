@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 import Layout from '../components/Layout'
@@ -27,7 +28,7 @@ const Dish = (props) => {
                     <div className="dish-img-box">
                         <img src={data.strMealThumb} alt="Meal Thumbnail" className="dish-img" />
                         <div className="dish-video">
-                            <a href={data.strYoutube} className="dish-yt-link">Watch Video</a>
+                            <a href={data.strYoutube} className="dish-yt-link">Watch Video</a> 
                         </div>
                     </div>
                 </div>
@@ -35,11 +36,11 @@ const Dish = (props) => {
                     <div className="dish-title">{data.strMeal}</div>
                     <div className="dish-category">
                         Category
-                        <a href={`/category/${data.strCategory}`} className="dish-cat-link">{data.strCategory}</a>
+                        <Link to={`/category/${data.strCategory}`} className="dish-cat-link">{data.strCategory}</Link> 
                     </div>
                     <div className="dish-area">
                         Cuisine 
-                        <a href={`/cuisine/${data.strArea}`} className="dish-area-link">{data.strArea}</a>
+                        <Link to={`/cuisine/${data.strArea}`} className="dish-area-link">{data.strArea}</Link> 
                     </div>
                     <div className="dish-tags">
                         <div className="dish-tags-text">Tags</div>
@@ -60,121 +61,121 @@ const Dish = (props) => {
                         <ul className="dish-ing-list">
                             {data.strIngredient1 && (
                                 <li className="dish-ing-item">
-                                    <a href={`/ingredient/${data.strIngredient1}`} className="dish-ing-link">{data.strIngredient1}</a>
+                                    <Link to={`/ingredient/${data.strIngredient1}`} className="dish-ing-link">{data.strIngredient1}</Link> 
                                     <span className="dish-ing-quan">{data.strMeasure1}</span>
                                 </li>
                             )}
                             {data.strIngredient2 && (
                                 <li className="dish-ing-item">
-                                    <a href={`/ingredient/${data.strIngredient2}`} className="dish-ing-link">{data.strIngredient2}</a>
+                                    <Link to={`/ingredient/${data.strIngredient2}`} className="dish-ing-link">{data.strIngredient2}</Link> 
                                     <span className="dish-ing-quan">{data.strMeasure2}</span>
                                 </li>
                             )}
                             {data.strIngredient3 && (
                                 <li className="dish-ing-item">
-                                    <a href={`/ingredient/${data.strIngredient3}`} className="dish-ing-link">{data.strIngredient3}</a>
+                                    <Link to={`/ingredient/${data.strIngredient3}`} className="dish-ing-link">{data.strIngredient3}</Link> 
                                     <span className="dish-ing-quan">{data.strMeasure3}</span>
                                 </li>
                             )}
                             {data.strIngredient4 && (
                                 <li className="dish-ing-item">
-                                    <a href={`/ingredient/${data.strIngredient4}`} className="dish-ing-link">{data.strIngredient4}</a>
+                                    <Link to={`/ingredient/${data.strIngredient4}`} className="dish-ing-link">{data.strIngredient4}</Link> 
                                     <span className="dish-ing-quan">{data.strMeasure4}</span>
                                 </li>
                             )}
                             {data.strIngredient5 && (
                                 <li className="dish-ing-item">
-                                    <a href={`/ingredient/${data.strIngredient5}`} className="dish-ing-link">{data.strIngredient5}</a>
+                                    <Link to={`/ingredient/${data.strIngredient5}`} className="dish-ing-link">{data.strIngredient5}</Link> 
                                     <span className="dish-ing-quan">{data.strMeasure5}</span>
                                 </li>
                             )}
                             {data.strIngredient6 && (
                                 <li className="dish-ing-item">
-                                    <a href={`/ingredient/${data.strIngredient6}`} className="dish-ing-link">{data.strIngredient6}</a>
+                                    <Link to={`/ingredient/${data.strIngredient6}`} className="dish-ing-link">{data.strIngredient6}</Link> 
                                     <span className="dish-ing-quan">{data.strMeasure6}</span>
                                 </li>
                             )}
                             {data.strIngredient7 && (
                                 <li className="dish-ing-item">
-                                    <a href={`/ingredient/${data.strIngredient7}`} className="dish-ing-link">{data.strIngredient7}</a>
+                                    <Link to={`/ingredient/${data.strIngredient7}`} className="dish-ing-link">{data.strIngredient7}</Link> 
                                     <span className="dish-ing-quan">{data.strMeasure7}</span>
                                 </li>
                             )}
                             {data.strIngredient8 && (
                                 <li className="dish-ing-item">
-                                    <a href={`/ingredient/${data.strIngredient8}`} className="dish-ing-link">{data.strIngredient8}</a>
+                                    <Link to={`/ingredient/${data.strIngredient8}`} className="dish-ing-link">{data.strIngredient8}</Link> 
                                     <span className="dish-ing-quan">{data.strMeasure8}</span>
                                 </li>
                             )}
                             {data.strIngredient9 && (
                                 <li className="dish-ing-item">
-                                    <a href={`/ingredient/${data.strIngredient9}`} className="dish-ing-link">{data.strIngredient9}</a>
+                                    <Link to={`/ingredient/${data.strIngredient9}`} className="dish-ing-link">{data.strIngredient9}</Link> 
                                     <span className="dish-ing-quan">{data.strMeasure9}</span>
                                 </li>
                             )}
                             {data.strIngredient10 && (
                                 <li className="dish-ing-item">
-                                    <a href={`/ingredient/${data.strIngredient10}`} className="dish-ing-link">{data.strIngredient10}</a>
+                                    <Link to={`/ingredient/${data.strIngredient10}`} className="dish-ing-link">{data.strIngredient10}</Link> 
                                     <span className="dish-ing-quan">{data.strMeasure10}</span>
                                 </li>
                             )}
                             {data.strIngredient11 && (
                                 <li className="dish-ing-item">
-                                    <a href={`/ingredient/${data.strIngredient11}`} className="dish-ing-link">{data.strIngredient11}</a>
+                                    <Link to={`/ingredient/${data.strIngredient11}`} className="dish-ing-link">{data.strIngredient11}</Link> 
                                     <span className="dish-ing-quan">{data.strMeasure11}</span>
                                 </li>
                             )}
                             {data.strIngredient12 && (
                                 <li className="dish-ing-item">
-                                    <a href={`/ingredient/${data.strIngredient12}`} className="dish-ing-link">{data.strIngredient12}</a>
+                                    <Link to={`/ingredient/${data.strIngredient12}`} className="dish-ing-link">{data.strIngredient12}</Link> 
                                     <span className="dish-ing-quan">{data.strMeasure12}</span>
                                 </li>
                             )}
                             {data.strIngredient13 && (
                                 <li className="dish-ing-item">
-                                    <a href={`/ingredient/${data.strIngredient13}`} className="dish-ing-link">{data.strIngredient13}</a>
+                                    <Link to={`/ingredient/${data.strIngredient13}`} className="dish-ing-link">{data.strIngredient13}</Link> 
                                     <span className="dish-ing-quan">{data.strMeasure13}</span>
                                 </li>
                             )}
                             {data.strIngredient14 && (
                                 <li className="dish-ing-item">
-                                    <a href={`/ingredient/${data.strIngredient14}`} className="dish-ing-link">{data.strIngredient14}</a>
+                                    <Link to={`/ingredient/${data.strIngredient14}`} className="dish-ing-link">{data.strIngredient14}</Link> 
                                     <span className="dish-ing-quan">{data.strMeasure14}</span>
                                 </li>
                             )}
                             {data.strIngredient15 && (
                                 <li className="dish-ing-item">
-                                    <a href={`/ingredient/${data.strIngredient15}`} className="dish-ing-link">{data.strIngredient15}</a>
+                                    <Link to={`/ingredient/${data.strIngredient15}`} className="dish-ing-link">{data.strIngredient15}</Link> 
                                     <span className="dish-ing-quan">{data.strMeasure15}</span>
                                 </li>
                             )}
                             {data.strIngredient16 && (
                                 <li className="dish-ing-item">
-                                    <a href={`/ingredient/${data.strIngredient16}`} className="dish-ing-link">{data.strIngredient16}</a>
+                                    <Link to={`/ingredient/${data.strIngredient16}`} className="dish-ing-link">{data.strIngredient16}</Link> 
                                     <span className="dish-ing-quan">{data.strMeasure16}</span>
                                 </li>
                             )}
                             {data.strIngredient17 && (
                                 <li className="dish-ing-item">
-                                    <a href={`/ingredient/${data.strIngredient17}`} className="dish-ing-link">{data.strIngredient17}</a>
+                                    <Link to={`/ingredient/${data.strIngredient17}`} className="dish-ing-link">{data.strIngredient17}</Link> 
                                     <span className="dish-ing-quan">{data.strMeasure17}</span>
                                 </li>
                             )}
                             {data.strIngredient18 && (
                                 <li className="dish-ing-item">
-                                    <a href={`/ingredient/${data.strIngredient18}`} className="dish-ing-link">{data.strIngredient18}</a>
+                                    <Link to={`/ingredient/${data.strIngredient18}`} className="dish-ing-link">{data.strIngredient18}</Link> 
                                     <span className="dish-ing-quan">{data.strMeasure18}</span>
                                 </li>
                             )}
                             {data.strIngredient19 && (
                                 <li className="dish-ing-item">
-                                    <a href={`/ingredient/${data.strIngredient19}`} className="dish-ing-link">{data.strIngredient19}</a>
+                                    <Link to={`/ingredient/${data.strIngredient19}`} className="dish-ing-link">{data.strIngredient19}</Link> 
                                     <span className="dish-ing-quan">{data.strMeasure19}</span>
                                 </li>
                             )}
                             {data.strIngredient20 && (
                                 <li className="dish-ing-item">
-                                    <a href={`/ingredient/${data.strIngredient20}`} className="dish-ing-link">{data.strIngredient20}</a>
+                                    <Link to={`/ingredient/${data.strIngredient20}`} className="dish-ing-link">{data.strIngredient20}</Link> 
                                     <span className="dish-ing-quan">{data.strMeasure20}</span>
                                 </li>
                             )}

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 const PopularDishes = () => {
@@ -18,7 +19,7 @@ const PopularDishes = () => {
         if (dish) {
             let arr = dish.filter((val, i) => i < 6)
             return arr && arr.map((data, i) => (
-            <a href={`/dish/${data.idMeal}`} className="p-dish-link" key={i}>
+            <Link to={`/dish/${data.idMeal}`} className="p-dish-link" key={i}>
                 <div className="p-dish-item">
                     <div className="dish-img-box">
                         <img src={data.strMealThumb} alt="Meal Thumbnail" className="dish-img" />
@@ -27,7 +28,7 @@ const PopularDishes = () => {
                         <div className="dish-title">{data.strMeal}</div>
                     </div>
                 </div>
-            </a>
+            </Link>
         ))
         }
     }

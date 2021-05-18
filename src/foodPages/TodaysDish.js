@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 const TodaysDish = () => {
@@ -24,11 +25,11 @@ const TodaysDish = () => {
                     <div className="dish-title">{data.strMeal}</div>
                     <div className="dish-category">
                         Category
-                        <a href={`/category/${data.strCategory}`} className="dish-cat-link">{data.strCategory}</a>
+                        <Link to={`/category/${data.strCategory}`} className="dish-cat-link">{data.strCategory}</Link>
                     </div>
                     <div className="dish-area">
                         Cuisine 
-                        <a href={`/cuisine/${data.strArea}`} className="dish-area-link">{data.strArea}</a>
+                        <Link to={`/cuisine/${data.strArea}`} className="dish-area-link">{data.strArea}</Link>
                     </div>
                     <div className="dish-tags">
                         <div className="dish-tags-text">Tags</div>
@@ -37,7 +38,7 @@ const TodaysDish = () => {
                         </div>
                     </div>
                     <div className="dish-video">
-                        <a href={data.strYoutube} className="dish-yt-link">Watch Video</a>
+                        <a href={data.strYoutube} target="_blank" className="dish-yt-link">Watch Video</a>
                     </div>
                 </div>
             </div>

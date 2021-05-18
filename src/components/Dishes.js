@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 import Layout from './Layout'
-// import FilterDishes from '../foodPages/FilterDishes'
-// import SearchDishes from '../foodPages/SearchDishes'
-
 import { getCategories, getAreas } from '../foodPages/Common_Func'
 
 const Dishes = () => {
@@ -241,7 +239,7 @@ const Dishes = () => {
     const showDishes = () => {
         let arr = getData(minVal, maxVal)
         return arr && arr.map((food, i) => (
-            <a href={`/dish/${food.idMeal}`} className="food-item-link" key={i}>
+            <Link to={`/dish/${food.idMeal}`} className="food-item-link" key={i}>
                 <div className="food-item">
                     <div className="food-img-box">
                         <img src={food.strMealThumb} alt="" className="food-img" />
@@ -250,22 +248,13 @@ const Dishes = () => {
                         <p className="food-title">{food.strMeal}</p>
                     </div>
                 </div>
-            </a>
+            </Link>
         ))
     }
 
     const showLoading = () => {
         return <p className="loading">Loading ...</p>
     }
-
-    // const showNoSearchData = () => {
-    //     return (
-    //         <div className="no-search">
-    //             <p className="no-sear">NO Data is Available with the Chosen Parameters</p>
-    //             <p className="no-sear">Please Try again.</p>
-    //         </div>
-    //     )
-    // }
 
     return (
         <Layout>
@@ -302,13 +291,10 @@ const Dishes = () => {
                         {title}
                     </div>
                     { isLoading && showLoading() }
-                    {/* { noSearchData && showNoSearchData() } */}
                     { !isLoading && !noSearchData && showDishes() }
                     <div className="pagni-btns">
                         { displayPrev && (<button className="pagni-prev-btn" onClick={() => pagniPrev()}><i className="fas fa-arrow-left"></i> &nbsp; Prev</button>)}
                         { displayNext && (<button className="pagni-next-btn" onClick={() => pagniNext()}>Next &nbsp; <i className="fas fa-arrow-right"></i></button>)}
-                        {/* <button className="pagni-prev-btn" onClick={() => pagniPrev()}>&lt; Prev</button>
-                        <button className="pagni-next-btn" onClick={() => pagniNext()}>Next &gt;</button> */}
                     </div>
                 </div>
             </div>
