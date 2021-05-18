@@ -109,6 +109,8 @@ const Ingredients = () => {
 
     const showSearchIng = () => {
         if(srIng) {
+            setMinVal(0)
+            setMaxVal(limit)
             let arr = getData(minVal, maxVal, srIng)
             return arr && arr.map((data, i) => (
                 <Link className="ing-link" key={i} to={`/ingredient/${data.strIngredient}`}>
