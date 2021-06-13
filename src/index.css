@@ -14,6 +14,7 @@
   --font-size-small: 0.75rem;
   --font-size-normal: 1rem;
   --font-size-large: 1.25rem;
+  --font-size-xl: 1.5rem;
 
   --font-weight-light: 100;
   --font-weight-normal: 500;
@@ -32,6 +33,7 @@ body {
   background: var(--light1);
   color: var(--black1);
   font-family: var(--font-family);
+  transition: all 0.5s ease-in;
 }
 
 body.dark {
@@ -70,7 +72,7 @@ select:focus-visible {
 }
 
 .logo-box a {
-  font-size: var(--font-size-large);
+  font-size: var(--font-size-xl);
   color: var(--blue1);
   font-style: italic;
   text-decoration: none;
@@ -121,6 +123,12 @@ select:focus-visible {
   color: var(--black2);
   font-weight: var(--font-weight-light);
   text-decoration: none;
+}
+
+.dark .nav-box,
+.dark ul,
+.dark li.nav-item {
+  background: var(--black2) !important;
 }
 
 .dark .nav-item a {
@@ -189,6 +197,7 @@ ul.dish-droplist {
 }
 
 .footer-logo {
+  font-size: var(--font-size-xl);
   color: var(--blue1);
   font-style: italic;
 }
@@ -243,6 +252,7 @@ svg.main-svg {
   width: 33vw;
   height: 55vh;
   margin-top: 2rem;
+  transform: scale(0);
 }
 
 .sec-1-footer {
@@ -300,6 +310,7 @@ svg.main-svg {
   font-size: 10rem;
   top: -4rem;
   color: var(--white1);
+  transform: scale(0);
 }
 
 .dark .numb-back {
@@ -340,6 +351,7 @@ svg.main-svg {
 
 .t-dish .dish-img-box {
   flex-basis: 60%;
+  /* transform: scale(0); */
 }
 
 .t-dish img.dish-img {
@@ -1742,6 +1754,18 @@ a.api-link {
 
 /* // Small devices (landscape phones, less than 768px) */
 @media (max-width: 768px) {
+  body {
+    font-size: 0.75rem;
+  }
+
+  .logo-box {
+    margin: 1rem 0 1rem 2rem;
+  }
+
+  .nav-toggle {
+    padding: 1rem 2rem 1rem 0;
+  }
+
   .sec-1-logo {
     font-size: 4rem;
   }
@@ -1930,6 +1954,9 @@ a.api-link {
 
   .ind-cat-dishes {
     padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .ind-cat-dish {
@@ -1954,12 +1981,17 @@ a.api-link {
     --font-size-small: 0.375rem;
     --font-size-normal: 0.5rem;
     --font-size-large: 0.75rem;
+    --font-size-xl: 1.25rem;
 
     --padding-basic: 1rem 2rem;
   }
 
+  body {
+    font-size: 0.75rem;
+  }
+
   .sec-1 {
-    height: 150vh;
+    height: 110vh;
   }
 
   .sec-1-left {
@@ -1968,7 +2000,7 @@ a.api-link {
   }
 
   .sec-1-logo {
-    margin-top: 5rem;
+    margin-top: 2rem;
   }
 
   .sec-1-cont {
@@ -2204,12 +2236,12 @@ a.api-link {
 
   .ind-cat-dish {
     margin: 1rem;
-    width: 100%;
+    width: 60vw;
   }
 
   img.ind-cat-dish-img {
     width: 100%;
-    height: 45vw;
+    height: 30vw;
   }
 
   .cuis {
@@ -2274,5 +2306,90 @@ a.api-link {
     margin: 3rem;
     font-size: 1rem;
     font-weight: var(--font-weight-light);
+  }
+}
+
+/* Animations */
+
+.fork {
+  opacity: 0;
+  /* animation: opacity-visible 0.75s forwards ease-in;
+  animation-delay: 2.5s; */
+}
+
+.spoon {
+  transform: rotate(15deg);
+  transform-origin: bottom;
+  /* animation: slight-rotate 0.5s forwards ease-in;
+  animation-delay: 2.5s; */
+}
+
+.sec-1-footer i.fas.fa-chevron-down {
+  transform: translateY(10px);
+  animation: slight-move-y 0.5s forwards ease-in;
+  animation-delay: 3s;
+  animation-iteration-count: 3;
+}
+
+/* .dish-img {
+  animation: bounce 1s forwards ease-in;
+  transform-origin: center;
+} */
+
+@keyframes opacity-visible {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slight-move-y {
+  0%,
+  100% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slight-rotate {
+  from {
+    transform: rotate(15deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
+
+@keyframes slide-left {
+  from {
+    margin-left: -100%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
+@keyframes slide-right {
+  from {
+    margin-right: -100%;
+  }
+  to {
+    margin-right: 0;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(0);
+  }
+  90% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
   }
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 const Header = () => {
@@ -30,6 +30,22 @@ const Header = () => {
         }
     }
 
+    const checkIfDark = () => {
+        const bodyClasses = document.body.classList
+        const dark_mode_logo_dark = document.querySelector('.dark-mode-logo-dark')
+        const dark_mode_logo_light = document.querySelector('.dark-mode-logo-light')
+        const dark_mode_text = document.querySelector('.dark-mode-text')
+        if(bodyClasses.contains("dark")) {
+            dark_mode_text.innerHTML = "Light Mode"
+            dark_mode_logo_dark.style.display = "none"
+            dark_mode_logo_light.style.display = "block"
+        }
+    }
+
+    useEffect(() => {
+        checkIfDark()
+    }, [])
+
     return (
         <div className="header">
             <nav className="nav">
@@ -37,7 +53,7 @@ const Header = () => {
                     <Link className="nav-link" to="/">food Info</Link>
                     <div className="dark-mode-btn" onClick={() => darkMode()}>
                         <div className="dark-mode-logo-dark"><i className="fas fa-moon"></i></div>
-                        <div className="dark-mode-logo-light"><i class="fas fa-sun"></i></div>
+                        <div className="dark-mode-logo-light"><i className="fas fa-sun"></i></div>
                         <div className="dark-mode-text">Dark Mode</div>
                     </div>
                 </div>

@@ -28,7 +28,7 @@ const Home = () => {
                                 height="754.88525" 
                                 viewBox="0 0 728 754.88525">
                                 <rect 
-                                    className="rect-1"
+                                    className="rect-1 fork fork1"
                                     x="514.67011" y="302.6311" 
                                     width="33" height="524" 
                                     transform="translate(-458.65432 311.24592) 
@@ -36,20 +36,20 @@ const Home = () => {
                                     fill="#e6e6e6"
                                 />
                                 <path 
-                                    className="path-1"
+                                    className="path-1 fork fork2"
                                     d="M335.58256,171.60615l63.84438,97.34271a8.5,8.5,0,0,1-14.21528,9.32341L311.81484,166.36508a60.62682,60.62682,0,0,0-29.14936,4.78729L362.63446,293.08a8.5,8.5,0,0,1-14.21528,9.3234l-79.969-121.92766A60.62685,60.62685,0,0,0,252.44516,205.304L325.842,317.2112a8.5,8.5,0,0,1-14.21528,9.3234l-63.84438-97.3427c-1.6398,27.14157,7.20944,59.3114,26.60329,88.881,36.04421,54.95614,94.83957,80.109,131.32307,56.18052s36.8396-87.87721.79539-142.83336C387.11022,201.85046,361.13005,180.91634,335.58256,171.60615Z" 
                                     transform="translate(-236 -72.55738)" 
                                     fill="#e6e6e6"
                                 />
                                 <rect 
-                                    className="rect-2"
+                                    className="rect-2 spoon spoon3"
                                     x="256" y="204" 
                                     width="33" height="524" 
                                     fill="#e6e6e6"
                                 />
-                                <ellipse className="elli-1" cx="272" cy="119" rx="79" ry="119" fill="#e6e6e6"/>
-                                <ellipse className="elli-2" cx="272" cy="119" rx="65" ry="97.91139" fill="#ccc"/>
-                                <ellipse className="elli-3" cx="364" cy="734" rx="364" ry="20.88525" fill="#e6e6e6"/>
+                                <ellipse className="elli-1 spoon spoon1" cx="272" cy="119" rx="79" ry="119" fill="#e6e6e6"/>
+                                <ellipse className="elli-2 spoon spoon2" cx="272" cy="119" rx="65" ry="97.91139" fill="#ccc"/>
+                                <ellipse className="elli-3 svg-base" cx="364" cy="734" rx="364" ry="20.88525" fill="#e6e6e6"/>
                                 <path 
                                     className="path-2"
                                     d="M815.26782,806.25045a1162.796,1162.796,0,0,0-412.53564,0A15.04906,15.04906,0,0,1,385,791.45826V604.55738H833V791.45826A15.04906,15.04906,0,0,1,815.26782,806.25045Z" 
